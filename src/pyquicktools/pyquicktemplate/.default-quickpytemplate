@@ -1,0 +1,63 @@
+% QuickPyTemplate  default template, used when no custom template is provided to the CLI functions.
+% For getting started, please read the documentation here: TBA
+#!/usr/bin/env python
+# -*- coding: utf-8 *-*
+
+
+""" ~*~ Docstring ~*~
+    {{__DOCSTRING__}}
+    {{max(__DOCSTRING_WIDTH__-17, 0)*' '}}~*~ Docstring ~*~
+
+    ~*~ CHANGELOG ~*~
+     _________________________________________
+    | VERSION |    DATE    |     CONTENT      |
+    |=========================================|
+    |  0.0.1  | {{__DATE__}} | Initial release. |
+     ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+                              ~*~ CHANGELOG ~*~ """
+
+
+#=--------------=#
+# Import section #
+#=--------------=#
+
+from   __future__ import annotations
+import typing
+
+# =------------------------------= #
+
+
+#=------------------=#
+# Authorship section #
+#=------------------=#
+
+{{INIT(__AUTHORS__)}}
+{{INIT(__CONTACT__)}}
+{{INIT(__COPYRIGHT__)}}
+{{INIT(__CREDITS__)}}
+{{INIT(__DATE__)}}
+{{INIT(__LICENSE__)}}
+{{INIT(__MAINTAINER__)}}
+{{INIT(__ORGANIZATION__)}}
+{{INIT(__STATUS__)}}
+{{INIT(__VERSION__)}}
+
+# ={{(len(INITS)-6)*'-'}}= #
+
+
+#=------------------------------------=#
+# Constants & Global variables section #
+#=------------------------------------=#
+
+NL = '\n'
+
+# =----------------------------------= #
+
+
+#=-----------=#
+# ... section #
+#=-----------=#
+    
+# Write yout code here
+
+# =----------------= #

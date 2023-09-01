@@ -1,0 +1,4 @@
+[
+    "Manually add the -help CLI commands to PQTemplate in order to make the help message start with an uppe letter 'S'.",
+    "Include docstring max width and different style."
+]
