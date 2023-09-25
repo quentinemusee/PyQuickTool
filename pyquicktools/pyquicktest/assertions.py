@@ -94,7 +94,7 @@ def ok() -> TestPassedException:
     """Validate a test."""
     raise TestPassedException
 
-def ko(error_msg: str = "") -> TestFailedException:
+def ko(error_msg: str = "", *args: str) -> TestFailedException:
     """Unvalidate a test."""
     stack = inspect.stack()[1]
     raise TestFailedException(f"""{stack.filename}:{stack.function[10:]}:{stack.lineno}: {"".join([error_msg] + list(args))}""")
