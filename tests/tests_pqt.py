@@ -86,7 +86,6 @@ def test_add_flag_1() -> typing.Union[TestPassedException, TestFailedException]:
 @execnbr(NBR_TESTS_EXEC)
 def test_add_attribute_1() -> typing.Union[TestPassedException, TestFailedException]:
     """Test the add_attribute decorator with random and default values."""
-    ensure(False)
     attribute  = gen_ascii_string()
     value      = gen_random_value()
     if gen_bool():
