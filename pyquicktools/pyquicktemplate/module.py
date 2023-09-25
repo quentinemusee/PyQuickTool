@@ -73,6 +73,7 @@ def new_module(**kwargs : typing.List[str] | str | int | None) -> None:
     # If examples are requested, print examples.
     if kwargs.get("examples", False):
         print("EXAMPLE USEEEE")
+        exit()
 
     # Parsing the template.
     filename, template = parse_template(

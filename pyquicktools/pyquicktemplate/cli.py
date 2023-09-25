@@ -68,7 +68,7 @@ def setup_parser(subparsers: argparse.Action) -> argparse.ArgumentParser:
     new_template_subparsers = new_template_subparser.add_subparsers()
 
     # Adding the new module template command parser.
-    new_module_template_subparser = add_group_subparser(new_template_subparsers, "module", "create, update and manage a module template Python projects", version, prefix="template new")
+    new_module_template_subparser = add_group_subparser(new_template_subparsers, "module", "create a module  template Python projects", version, prefix="template new")
 
     # Adding the new module template arguments
     new_module_template_subparser.add_argument("-a",   "--authors",       type = str, nargs = '+', default = None, help = "setting the Python module authors list")
@@ -92,7 +92,7 @@ def setup_parser(subparsers: argparse.Action) -> argparse.ArgumentParser:
     new_module_template_subparser.set_defaults(func=new_module)
 
     # Adding the new package template command parser.
-    new_package_template_subparser = add_group_subparser(new_template_subparsers, "package", "create, update and manage a package template Python projects", version, prefix="template new")
+    new_package_template_subparser = add_group_subparser(new_template_subparsers, "package", "create a package template Python projects", version, prefix="template new")
 
     # Adding the new package template arguments
     new_package_template_subparser.add_argument("-a",   "--authors",       type = str, nargs = '+', default = None, help = "setting the Python package authors list")
@@ -117,7 +117,7 @@ def setup_parser(subparsers: argparse.Action) -> argparse.ArgumentParser:
     new_package_template_subparser.set_defaults(func=new_package)
 
     # Adding the new library template command parser.
-    # new_library_template_subparser = add_group_subparser(new_template_subparsers, "library", "create, update and manage a library template Python projects", version, prefix="template new")
+    # new_library_template_subparser = add_group_subparser(new_template_subparsers, "library", "create a library template Python projects", version, prefix="template new")
 
     # Adding the new library template arguments
     # new_library_template_subparser.add_argument("-a",   "--authors",       type = str, nargs = '+', default = None, help = "setting the Python library authors list")

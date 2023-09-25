@@ -5,15 +5,19 @@
 """ ~*~ Docstring ~*~
      PyQuickTemplate is a tool designed for allowing
     easy and quick python project template management.
-    The "utils.py" file contains utiliyy functions for
-         the rest of the PyQuickTemplate project.
-                                      ~*~ Docstring ~*~
+      A single CLI line is required to create single
+     file project, folder project, library or package.
+                                     ~*~ Docstring ~*~
 
     ~*~ CHANGELOG ~*~
      ____________________________________________________________________________________
     | VERSION |    DATE    |                           CONTENT                           |
     |====================================================================================|
     |  0.0.1  | 2023/08/14 | Initial release.                                            |
+    |------------------------------------------------------------------------------------|
+    |  0.0.2  | 2023/09/24 | Changind decorators names.                                  |
+    |------------------------------------------------------------------------------------|
+    |  0.1.0  | 2023/09/24 | Add a working CLI tool.                                     |
      ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
                                                                          ~*~ CHANGELOG ~*~ """
 
@@ -42,7 +46,7 @@ __license__      = "MIT"
 __maintainer__   = "Quentin Raimbaud"
 __organization__ = None
 __status__       = "Development"
-__version__      = "0.0.1"
+__version__      = "0.1.0"
 
 # =-------------------------------------------------= #
 

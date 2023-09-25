@@ -1,4 +1,2 @@
-    "__future__",
-    "typing",
-    "logging",
-    "colorama"
+setuptools>=61.0
+colorama

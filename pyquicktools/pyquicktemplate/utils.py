@@ -65,7 +65,7 @@ NL = '\n'
 
 def guard_author(kwargs: typing.Dict[str, typing.List[str] | str | int | None], special_variables: typing.List[str], template: str) -> str:
     """Update the given kwargs context for modifying authors to author if no author of only one is given."""
-    if type(kwargs["authors"]) == str:
+    if type(kwargs["authors"]) is not list:
         kwargs["authors"] = [kwargs["authors"]]
     if kwargs["authors"] == None or len(kwargs["authors"]) == 1:
         kwargs["author"] = kwargs["authors"][0]

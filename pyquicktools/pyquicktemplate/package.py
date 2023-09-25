@@ -70,7 +70,12 @@ def new_package(**kwargs : typing.List[str] | str | int | None) -> None:
     : param main_file     : The main file name of the new python multiple-files project. If not provided, "main.py" will be designed.
     : param template_file : The path of the template file used for the new python multiple-files project. If not provided, the default one is used instead.
     : param indent        : The indentation string. If an indentation is given, it will be a number of spaces."""
-    
+
+    # If examples are requested, print examples.
+    if kwargs.get("examples", False):
+        print("EXAMPLE USEEEE")
+        exit()
+
     # If no filenames list is provided, an empty list is used.
     filenames = kwargs.get("filenames", None)
     if filenames == None:

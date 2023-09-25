@@ -42,7 +42,7 @@ import typing
 {{INIT(__STATUS__)}}
 {{INIT(__VERSION__)}}
 
-# ={{(len(INITS)-6)*'-'}}= #
+# ={{(INITS_WIDTH-6)*'-'}}= #
 
 
 #=------------------------------------=#

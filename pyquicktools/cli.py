@@ -14,6 +14,10 @@
     | VERSION |    DATE    |                           CONTENT                           |
     |====================================================================================|
     |  0.0.1  | 2023/08/14 | Initial release.                                            |
+    |------------------------------------------------------------------------------------|
+    |  0.0.2  | 2023/09/24 | Changind decorators names.                                  |
+    |------------------------------------------------------------------------------------|
+    |  0.1.0  | 2023/09/24 | Add a working CLI tool.                                     |
      ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
                                                                          ~*~ CHANGELOG ~*~ """
 
@@ -27,11 +31,12 @@ import typing
 import logging
 import sys
 import argparse
+import os;sys.path.append(os.path.join(os.path.dirname(__file__), '..')) 
 import pyquicktools.pyquicktemplate.cli
 import pyquicktools.pyquicktest.cli
 from   pyquicktools.pyquicktemplate.module  import new_module
 from   pyquicktools.pyquicktemplate.package import new_package
-from   pyquicktools.pyquicktest.test        import test
+from   pyquicktools.pyquicktest.cli         import cli_test
 
 # =------------------------------= #
 
@@ -49,7 +54,7 @@ __license__      = "MIT"
 __maintainer__   = "Quentin Raimbaud"
 __organization__ = None
 __status__       = "Development"
-__version__      = "0.0.1"
+__version__      = "0.1.0"
 
 # =-------------------------------------------------= #
 
@@ -94,7 +99,13 @@ https://github.com/quentinemusee/PyQuickTools.
     parser.add_argument("-v", "--version", action="version", version=f"PyQuickTools Python CLI v{__version__} status: {__status__}")
 
     # Adding the verbose argument.
-    parser.add_argument("-vv", "--verbose", action="store_true", help="add verbosity printing during the execution of the program", default=False)
+    parser.add_argument(
+        "-vv",
+        "--verbose",
+        action="store_true",
+        help="add verbosity printing during the execution of the program",
+        default=False
+    )
 
     # Adding subparsers to the parser..
     subparsers = parser.add_subparsers()
@@ -129,10 +140,9 @@ test                           test python project with an easy to deploy testin
     else:
         kwargs = vars(args)
         func = kwargs.pop("func")
-        exec(f"{func.__name__}(" + ", ".join(f"""{key} = {('"' + kwargs[key] + '"') if type(kwargs[key]) is str else kwargs[key]}""" for key in kwargs) + ')')
+        func(**kwargs)
 
+# =--------------------------------------------------------------------------------------------------------------------------= #
 
-# =--------------------= #
-
-
-main()
+if __name__ == "__main__":
+    main()
